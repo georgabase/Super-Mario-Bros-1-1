@@ -9,12 +9,14 @@ public class score : MonoBehaviour
 
 	[HideInInspector]
 	public int playerScore = 0;
-	public static score instace;
 
 	public bool isBaby = true;
 	public bool isSuper = false;
 	public bool isFire = false;
 	public bool isGod = false;
+	public bool isStar = false;
+
+	public bool troopaIsShell = false;
 
 	#endregion
 
