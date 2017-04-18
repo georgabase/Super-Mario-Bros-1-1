@@ -1,39 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class score : MonoBehaviour
 {
 
-	#region PUBLIC
+    #region PUBLIC
 
-	[HideInInspector]
-	public int playerScore = 0;
+    [HideInInspector]
+    public static int playerScore = 0;
+    [HideInInspector]
+    public static bool isBaby = true;
+    [HideInInspector]
+    public static bool isSuper = false;
+    [HideInInspector]
+    public static bool isFire = false;
+    [HideInInspector]
+    public static bool isGod = false;
+    [HideInInspector]
+    public static bool isStar = false;
+    [HideInInspector]
+    public static bool troopaIsShell = false;
+    [HideInInspector]
+    public static int lives = 3;
+    [HideInInspector]
+    public static int coins = 0;
 
-	public bool isBaby = true;
-	public bool isSuper = false;
-	public bool isFire = false;
-	public bool isGod = false;
-	public bool isStar = false;
+    #endregion
 
-	public bool troopaIsShell = false;
+    #region PRIVATE
 
-	#endregion
-
-	#region PRIVATE
-
-	private Text scoreLabel;
+    private Text scoreLabel;
 
 
-	#endregion
+    #endregion
 
-	void Start ()
-	{
-		scoreLabel = GetComponent<Text> ();
-	}
+    void Start()
+    {
+        scoreLabel = GetComponent<Text>();
+    }
 
-	void Update ()
-	{
-		scoreLabel.text = "" + playerScore;
-	}
+    void Update()
+    {
+        scoreLabel.text = "" + playerScore;
+
+        if (lives == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 }

@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{3D1D94B5-F6E0-41F0-9251-1B6D5BC4C41C}") = "Super Mario Bros 1-1", "Assembly-CSharp.csproj", "{3F566BCA-CF61-E44C-89FD-C80EAAF98A8E}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Super Mario Bros 1-1", "Assembly-CSharp.csproj", "{3F566BCA-CF61-E44C-89FD-C80EAAF98A8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
